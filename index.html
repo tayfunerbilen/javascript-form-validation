@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <form action="ajax.php" class="form" id="form1" novalidate>
+        <h3>Form Örneği</h3>
+        <ul>
+            <li>
+                <label>Kullanıcı Adı</label>
+                <input type="text" name="username" required>
+            </li>
+            <li>
+                <label>E-posta Adresiniz</label>
+                <input type="email" name="email" required>
+            </li>
+            <li>
+                <label>Şifreniz</label>
+                <input type="password" name="password" required>
+            </li>
+            <li>
+                <label>Github Adresin</label>
+                <input type="url" name="github_url" required>
+            </li>
+            <li>
+                <label>Bilgi Düzeyiniz</label>
+                <select name="knowledge" required>
+                    <option value="">Seçin</option>
+                    <option value="1">İyi Düzeyde</option>
+                    <option value="2">Orta Düzeyde</option>
+                    <option value="3">Başlangıç</option>
+                </select>
+            </li>
+            <li>
+                <label>Hakkınızda</label>
+                <textarea name="about" cols="30" rows="5" required></textarea>
+            </li>
+            <li>
+                <label>Fotoğrafın</label>
+                <input type="file" name="photo" required>
+            </li>
+            <li>
+                <label>Cinsiyet</label>
+                <div class="radio-container">
+                    <input type="radio" required name="gender" value="2">
+                    erkek
+                    <input type="radio" required name="gender" value="1">
+                    kadın
+                </div>
+            </li>
+            <li>
+                <label>Yapman gerekeni yaptın mı?</label>
+                <div class="radio-container">
+                    <input type="checkbox" name="hobby" value="Bisiklete Binmek" required>
+                    Günde 1 kere reklamlara tıkladım!
+                </div>
+            </li>
+            <li>
+                <button type="submit">Gönder</button>
+            </li>
+        </ul>
+    </form>
+
+    <form action="ajax2.php" id="form2" class="form" novalidate>
+        <ul>
+            <li>
+                <label>IBAN</label>
+                <input type="text" pattern="[0-9]{5}" name="iban" required>
+            </li>
+            <li>
+                <button type="submit">Gönder</button> 
+            </li>
+        </ul>
+    </form>
+    
+    <script src="./validation.js"></script>
+    <script src="./index.js"></script>
+    
+</body>
+</html>
